@@ -1,0 +1,292 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage"   %>
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+      <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>        
+    <title> 外婆滴雞精來自-「對家人的用心關懷」  </title>
+    <meta name="keywords" content="外婆滴雞精, grandma I love you,對家人的用心關懷,滴雞精,禾豐生機
+        ,口口回甘的幸福滋味,黑羽滴雞精,自己的雞自己滴,芒果雞,完全沒腥味,古法智慧,私訊回不完,女兒做月子,部落客推薦,保養母體"/>
+    <meta name="description" content="傳統習俗中女兒出嫁時媽媽要潑水，象徵女兒出嫁後便是夫家的人了，外婆並沒有遵循古禮，外婆對女兒說：「妳是我辛苦懷胎生下的，是心頭肉，家中永遠有屬於妳的位置」。外婆疼愛女兒的心情可見一斑。 
+
+從小生活在南部的外婆，飲食簡單，只吃原形食物少吃加工食品，台北的孫女愛吃雞腿，外婆擔心市場雞使用藥物飼養，開始自己少量飼養黑羽土雞，堅持只餵食五穀雜糧並添加草本酵素照顧土雞的健康，她說只有自己養的雞才能放心的大口吃。 
+
+知道女兒懷孕後外婆好開心，但女兒懷孕初期胃口不佳，臉色愈來愈不好，外婆想起長輩傳承的養胎聖品－滴雞精，就用自家飼養的雞隻經過細火慢熬，用心厚工的製作，將一碗香醇營養的滴雞精端給女兒飲用，看著女兒將滴雞精喝到一滴不剩並說了一句:好好喝喔！剎那間所有的辛苦都值得了。 
+
+看著女兒日漸隆起的肚子，一方面期待著快要可以和孫子見面，一方面擔心著女兒日漸沉重的負擔，外婆將煉製好的滴雞精冷凍包裝起來，讓女兒可以天天飲用，補充營養，就像媽媽陪伴在身邊細心呵護一般。 
+
+期盼中的孫子終於來報到了，看著健康圓胖的孫子，外婆高興的合不攏嘴，細心的幫女兒做月子，常常跟她說：「月內食一嘴，卡贏月外食甲畏」，意思是說做月子吃一口，比做完月子吃到膩來得好，天下父母心，對外婆來說，家人的健康是最重要的。。
+
+外婆滴雞精來自「對家人的用心關懷」
+
+外婆理念
+PERSISTENCE
+安心:
+在這個充滿各式食品化學添加物、藥物濫用的時代裡，
+外婆重視『食材來源的安全』與『食物的原味』，
+堅持用最在地無毒的食材，
+製作出最單純美好的食物滋味。
+從產地到製作到餐桌，嚴格把關，
+【只為給您最大的安心】
+
+關懷:
+庄腳長大的外婆，重視家人間的親情溫暖。
+我們鼓勵大家回到餐桌上，
+享受一頓全家相聚的晚餐，
+給予我們最愛的家人長輩一個關懷，
+【因為陪伴是最好的禮物】
+公益:
+因為大家的信任支持，
+外婆才能一步一腳印的成長，
+我們懷著感恩的心，
+在每個月的營收中，撥出一點所得，
+買些物資捐贈給在社會上默默為弱勢族群付出的社福團體，
+因為他們的無私奉獻，讓我們看見台灣最溫暖的『人情』。
+【我們做的不多，但我們一直在做】" />
+    <meta itemprop="name" content="外婆滴雞精:: 來自「對家人的用心關懷」">
+    <meta itemprop="image" content="https://www.grandma520.com/images/grandma520.jp">
+    <meta itemprop="description" content="外婆滴雞精:: 來自「對家人的用心關懷」">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0" />
+    <meta name="author" content="kuan0904@ms16.hinet.net"/>
+    <meta name="copyright" content="本網頁著作權屬外婆滴雞精所有"/>
+      <!--fb meta-->
+      <meta property="fb:app_id" content="2029614853985064" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://www.grandma520.com/images/grandma520.jpg" />
+    <meta property="og:title" content="外婆滴雞精"/>
+    <meta property="og:url" content="https://www.grandma520.com/"/>
+    <meta property="og:image" content="https://www.grandma520.com/images/grandma520.jpg"/>
+    <meta property="og:description" content="外婆滴雞精來自「對家人的用心關懷」"/>
+    <meta property="og:site_name" content="外婆滴雞精"/>
+    <meta itemprop="description" content="外婆滴雞精來自「對家人的用心關懷」"/>
+       <script type="text/javascript" src="js/jquery-1.11.1.min.js" charset="utf-8"></script>
+
+    <!-- Animate CSS-->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Style -->
+    <link href="css/style.css?v=3" rel="stylesheet">
+    <!-- Responsive CSS -->
+    <link href="css/responsive.css" rel="stylesheet">
+    <!--icon-->
+    <link rel="icon" href="images/iconLogo.png" type="image/ico" />
+    <!--仿宋字體-->
+    <style>
+        .cwTeXFangSong {           
+            font-family: 'cwTeXFangSong', serif;
+        }
+        @font-face {
+            /*仿宋*/
+            font-family: 'cwTeXFangSong';
+            font-style: normal;
+            font-weight: 500;
+            src: url(//fonts.gstatic.com/ea/cwtexfangsong/v3/cwTeXFangSong-zhonly.eot);
+            src: url(//fonts.gstatic.com/ea/cwtexfangsong/v3/cwTeXFangSong-zhonly.eot?#iefix) format('embedded-opentype'), url(//fonts.gstatic.com/ea/cwtexfangsong/v3/cwTeXFangSong-zhonly.woff2) format('woff2'), url(//fonts.gstatic.com/ea/cwtexfangsong/v3/cwTeXFangSong-zhonly.woff) format('woff'), url(//fonts.gstatic.com/ea/cwtexfangsong/v3/cwTeXFangSong-zhonly.ttf) format('truetype');
+        }
+    </style>
+
+        <script type="text/javascript">
+    var storage = 10;
+	function goodsAdd(p_PRODUCTID, p_num,p_kind) {
+	    $.post('addcars.ashx', {
+	        "p_ID": p_PRODUCTID
+            , "p_num": p_num
+            ,"kind":p_kind
+            , "_": new Date().getTime()
+	    }, function (data) {
+	         if (data == "-3") {
+	            alert('該商品已經下架');
+	         } else if (data == "-2") {
+	             storage = data;
+	             alert('該商品庫存數不足');	           
+	        } else {
+	             if (p_kind == 'add') {
+	                 alert('成功放入購物車');
+	             }
+	             else {
+	                 alert('數量更改完畢');
+	             }
+	                $.get("Shoppinglist.ashx", function (data) {
+	                    $("#item").html(data);
+	                
+	                });
+	             $('.badge').html(data);
+	        } 
+	    });
+	}
+
+	$(function () {
+	    //分享至臉書
+	    $("#FB").click(function () {
+	        window.open('https://www.facebook.com/share.php?u='.concat(encodeURIComponent(location.href)), "_blank", "toolbar=yes,location=yes, directories=no, status=no,menubar=yes,scrollbars=yes,esizable=no, copyhistory=yes, width=600,  height=400")
+	    })
+	})
+
+	function getPageName() {
+	    var url = window.location.pathname;
+	    var index = url.lastIndexOf("/") + 1;
+	    var filenameWithExtension = url.substr(index);
+	    var filename = filenameWithExtension.split(".")[0];
+	    return filename;
+	}
+
+	function validEmail(v) {
+	    var r = new RegExp("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
+	    return (v.match(r) == null) ? false : true;
+	}
+	function GetURLParameter(sParam) { var sPageURL = window.location.search.substring(1); var sURLVariables = sPageURL.split('&'); for (var i = 0; i < sURLVariables.length; i++) { var sParameterName = sURLVariables[i].split('='); if (sParameterName[0] == sParam) return sParameterName[1]; } }
+
+	function base64_encode(a) {
+	    return Base64.encode(a)
+	}
+	function base64_decode(a) {
+	    return Base64.decode(a)
+	}
+
+	var Base64 = {
+	    _keyStr: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
+	    encode: function (input) { var output = ""; var chr1, chr2, chr3, enc1, enc2, enc3, enc4; var i = 0; input = Base64._utf8_encode(input); while (i < input.length) { chr1 = input.charCodeAt(i++); chr2 = input.charCodeAt(i++); chr3 = input.charCodeAt(i++); enc1 = chr1 >> 2; enc2 = ((chr1 & 3) << 4) | (chr2 >> 4); enc3 = ((chr2 & 15) << 2) | (chr3 >> 6); enc4 = chr3 & 63; if (isNaN(chr2)) { enc3 = enc4 = 64; } else if (isNaN(chr3)) { enc4 = 64; } output = output + this._keyStr.charAt(enc1) + this._keyStr.charAt(enc2) + this._keyStr.charAt(enc3) + this._keyStr.charAt(enc4); } return output; },
+	    decode: function (input) { var output = ""; var chr1, chr2, chr3; var enc1, enc2, enc3, enc4; var i = 0; input = input.replace(/[^A-Za-z0-9\+\/\=]/g, ""); while (i < input.length) { enc1 = this._keyStr.indexOf(input.charAt(i++)); enc2 = this._keyStr.indexOf(input.charAt(i++)); enc3 = this._keyStr.indexOf(input.charAt(i++)); enc4 = this._keyStr.indexOf(input.charAt(i++)); chr1 = (enc1 << 2) | (enc2 >> 4); chr2 = ((enc2 & 15) << 4) | (enc3 >> 2); chr3 = ((enc3 & 3) << 6) | enc4; output = output + String.fromCharCode(chr1); if (enc3 != 64) { output = output + String.fromCharCode(chr2); } if (enc4 != 64) { output = output + String.fromCharCode(chr3); } } output = Base64._utf8_decode(output); return output; },
+	    _utf8_encode: function (string) { string = string.replace(/\r\n/g, "\n"); var utftext = ""; for (var n = 0; n < string.length; n++) { var c = string.charCodeAt(n); if (c < 128) { utftext += String.fromCharCode(c); } else if ((c > 127) && (c < 2048)) { utftext += String.fromCharCode((c >> 6) | 192); utftext += String.fromCharCode((c & 63) | 128); } else { utftext += String.fromCharCode((c >> 12) | 224); utftext += String.fromCharCode(((c >> 6) & 63) | 128); utftext += String.fromCharCode((c & 63) | 128); } } return utftext; },
+	    _utf8_decode: function (utftext) { var string = ""; var i = 0; var c = c1 = c2 = 0; while (i < utftext.length) { c = utftext.charCodeAt(i); if (c < 128) { string += String.fromCharCode(c); i++; } else if ((c > 191) && (c < 224)) { c2 = utftext.charCodeAt(i + 1); string += String.fromCharCode(((c & 31) << 6) | (c2 & 63)); i += 2; } else { c2 = utftext.charCodeAt(i + 1); c3 = utftext.charCodeAt(i + 2); string += String.fromCharCode(((c & 15) << 12) | ((c2 & 63) << 6) | (c3 & 63)); i += 3; } } return string; }
+	}
+
+</script>
+
+</head>
+
+<body>
+
+    <form id="form1" runat="server">
+                <header id="HOME" style="background-position: 50% -125px;">
+	            <nav class="navbar navbar-default navbar-fixed-top">
+	              <div class="container">
+	                <!-- Brand and toggle get grouped for better mobile display -->
+	                <div class="navbar-header">
+	                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	                    <span class="sr-only">Toggle navigation</span>
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                  </button>     
+                        <div class="top_logo">
+                        <a href="index"> <img src="images/logo.png" alt="" /></a>   
+                        </div>
+                             <div class="buy">
+                                    <a href="/product"><img src="img/buy.jpg" /></a> 
+                                </div> 
+	                </div>
+	                <!-- Collect the nav links, forms, and other content for toggling -->
+	                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">             
+                        <li><a href="news">最新消息</a></li>          
+                        <li><a href="about">關於外婆</a></li>
+                        <li><a href="article">認識滴雞精</a></li>
+                        <li><a href="product">線上購物</a></li>
+                        <li><a href="kitchen">外婆上菜</a></li> 
+                        <li class="dropdown">
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span><span class="badge">  <%=shopCounts%></span>購物車</a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li role="presentation" class="dropdown-header"></li>
+                                <li role="presentation" class="dropdown-header" id="item"><%= shipitem %></li>
+                                <li role="presentation" class="divider"></li>
+                                <li><a href="login?page=pay">前往結帳</a></li>
+                            </ul>
+                        </li> 
+                        <li><a href="login"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>會員專區</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+	              </div><!-- /.container -->
+	            </nav> 
+	            	      
+                            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+       
+    </header>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder>
+
+    </form>
+        <footer>
+            <div class="container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 text-center">
+                            <div class="footer_logo">
+                                <a href="index"> <img src="images/logo.png" alt="" /></a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <div class="footer_logo">                                
+                                <p>訂購專線 <span style="color: #d8d8d8;">0920-193-420</span> </p>
+                                <p>地址 <span style="color: #d8d8d8;">新北市三重區名源街61巷5號</span></p>      
+                                <p>合豐生機有限公司</p> 
+                                <p >營業時間: <span style="color:white">週一到週五 10:00-20:00<br class="m"/>  週六10:00~12:00</span></p>                                                         
+                                <a href="line://ti/p/@ztn4623i"> <img src="images/LineLife.png" alt="" /><span style="color: #d8d8d8; font-family: 微軟正黑體; position: relative; left: -20px;">線上客服</span> </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 text-center">
+                                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fgrandma520520&tabs=timeline&width=350&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="250" height="130" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <div class="copyright_text">
+                                <p>外婆滴雞精 2017 © Copyright All Rights Reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        </footer>
+            <div id="scrollAD" style="position: fixed; top: 100px; left: 0px;z-index:10000"  ">
+             <a href="/login?page=pay"><img src="img/cart.png" width="40" /><br /><span style="color:white;font-size:16px;">結帳</span></a>            
+                
+        </div>
+    <script>
+      
+        $(function () {
+            // APP QRCode位置
+            $("#scrollAD").css("top", screen.availHeight / 2 - 50);
+            $("#scrollAD").css("left", (screen.availWidth -60));
+        });
+
+
+    </script>
+         <!--<script src="js/jquery.min.js"></script>-->
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.nicescroll.js"></script>
+        <script src="js/owl.carousel.js"></script>
+        <script src="js/wow.js"></script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-104544397-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '787289794795972');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=787289794795972&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+</body>
+</html>
