@@ -42,7 +42,7 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td><%=username  %>, <%=mobile %>,<%=address  %></td>
+                                            <td><%=shipname  %>, <%=shipphone %>,<%=shipaddress  %></td>
                                             <td><%=paymode %></td>
                                             <td><%=receivetime %></td>
                                             <td><%=ordstatus %></td>                             

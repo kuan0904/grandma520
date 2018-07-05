@@ -42,6 +42,9 @@ public class add_order : IHttpHandler,IRequiresSessionState  {
         string promo = context.Request["promo"];
         if (contents == null) contents = "";
         int DiscountPrice = 0;
+        DataTable dt = classlib.Get_promo("1");
+        int ship_condition = int.Parse(dt.Rows[0]["ps_condition"].ToString());
+
         if (context.Session["memberid"] == null || context.Session["memberid"].ToString() == "")
         {
             using (OleDbConnection conn = new OleDbConnection(classlib.dbConnectionString))
@@ -85,7 +88,7 @@ public class add_order : IHttpHandler,IRequiresSessionState  {
                     rs.Close();
                     cmd.Dispose();
 
-                    DataTable dt = classlib.Get_promo("5");
+                    dt = classlib.Get_promo("5");
                     string subject = dt.Rows[0]["ps_name"].ToString();
                     string mailbody = dt.Rows[0]["contents"].ToString();
                     mailbody = mailbody.Replace("@password@", PASSWD);
@@ -232,14 +235,16 @@ public class add_order : IHttpHandler,IRequiresSessionState  {
                 }
 
                 DeliveryPrice = 150;
+               
+
                 if (int.Parse(countyid) > 22)  DeliveryPrice = 260;
-                if ( SubPrice >=5000) DeliveryPrice = 0;
-                if (promo == "1") DeliveryPrice = 0;
+                if ( SubPrice >=ship_condition) DeliveryPrice = 0;
+             
                 if (paymode == "5") DeliveryPrice = 0;
                 if (paymode == "4") DeliveryPrice += 60;
                 if (self != "") {
                     DeliveryPrice = 0;
-                  
+
                 };
                 TotalPrice = SubPrice + DeliveryPrice ;
                 DiscountPrice = int.Parse ( classlib. Get_coupon_no ( context.Session ["memberid"].ToString (),discount_no,SubPrice.ToString ()));

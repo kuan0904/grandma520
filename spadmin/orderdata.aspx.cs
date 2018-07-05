@@ -334,13 +334,16 @@ public partial class spadmin_orderdata : System.Web.UI.Page
         for (i = 0; i < dt.Rows.Count; i++)
         {
             string num = "60";
-            if ( int.Parse (dt.Rows[i]["num"].ToString()) > 6)
-                num = "120";
-            else if ( int.Parse ( dt.Rows[i]["num"].ToString()) < 4)
-                num = "60";
-            else
-                num = "90";
-         
+            if (dt.Rows[i]["num"].ToString ()  != "")
+            {
+              
+                if (int.Parse(dt.Rows[i]["num"].ToString()) > 6)
+                    num = "120";
+                else if (int.Parse(dt.Rows[i]["num"].ToString()) < 4)
+                    num = "60";
+                else
+                    num = "90";
+            }
             string receivetime = dt.Rows[i]["receivetime"].ToString();
             if (receivetime == "1") receivetime = "4";
             if (receivetime == "2") receivetime = "1";

@@ -27,6 +27,9 @@ public partial class order_info : System.Web.UI.Page
     public string SubPrice = "";
     public string DiscountPrice = "";
     public string receivetime = "";
+    public string shipname = "";
+    public string shipphone = "";
+    public string shipaddress = "";
     protected void Page_Load(object sender, EventArgs e)
     {
       ord_code = Request.QueryString["ord_code"];
@@ -49,7 +52,7 @@ public partial class order_info : System.Web.UI.Page
                 {
                     email = rs["email"].ToString();
                     ordstatus = rs["ordstatus"].ToString();
-                     address = rs["ordaddress"].ToString();               
+                    address = rs["ordaddress"].ToString();              
                   
                     username = rs["ordname"].ToString();
                     phone = rs["ordphone"].ToString();
@@ -60,6 +63,10 @@ public partial class order_info : System.Web.UI.Page
                     TotalPrice =  rs["TotalPrice"].ToString();
                     receivetime = rs["receivetime"].ToString();
                     paymode = rs["paymode"].ToString();
+
+                    shipname  =rs["shipname"].ToString();
+                    shipphone  = rs["shipphone"].ToString();
+                    shipaddress  = rs["shipaddress"].ToString();
                 }
                 switch (receivetime)
                 { 

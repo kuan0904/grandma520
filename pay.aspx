@@ -7,10 +7,11 @@
         var countyid = "<%=countyid %>";
         var zip = "<%=zip%>";
         var cityid = "<%=cityid%>";     
-         var shipprice = 0;
+        var shipprice = 0;
         var storage = 10;
         var memberid = '<%=memberid%>';
         var promo = "";
+        var ship_condition =<%=ship_condition%>;
         function num_change(obj, p_id) {
             num = obj.value;
             goodsAdd(p_id, num, 'update');
@@ -40,8 +41,9 @@
             var countyid = $('#countyid').val();
             shipprice = 150;
             if (countyid > 22) shipprice = 260;                          
-            if (amount >= 5000) shipprice = 0;            
-            if (promo == "1") shipprice = 0;
+            if (amount >= ship_condition) shipprice = 0;     
+
+           // if (promo == "1") shipprice = 0;
             if ($('input[name="paymode"]:checked').val() == '4') {
                 shipprice += 60;
             }
@@ -64,14 +66,33 @@
 
             }
             $('#subtotal').html(amount);
-            amount = amount - $("#discount_price").html();         
+            amount = amount - $("#discount_price").html();    
+           
             $('#amount').html(amount);         
             $('#shipprice').html(shipprice);
             $('#totalprice').html(amount + shipprice);
         }
 
         $(document).ready(function () {
-  
+               $("#email").blur(function () {
+          
+                   $.post('Handler.ashx', { "email": $("#email").val(), "_": new Date().getTime() }, function (data) {
+                       if (data == "Y") {
+
+                           alert('此Email已是會員,請登入後再結帳!');
+                           $("#email").val('');
+                       }
+                });
+            });
+
+            var buynum = 0;
+            $(".sel_ProNum").each(function (index) {
+                buynum += 1;
+            });
+            if (buynum == 0) {
+                alert('購物車無商品,請重新選購!');
+                location.href = '/product';
+            }
             getCounty();
             getCity(countyid, '#cityid');
             $("input[name='paymode']").change(function () {
@@ -632,8 +653,8 @@
                                     </tr>
                                     <tr>
                                         <td>付款方式與運費<br />
-                                            <span style="color: #ca0000;">※黑貓冷凍運費説明：單筆購物滿5000元(含)以上免運。<br>
-                                                未滿5000元，本島150元，外島260元。</span><br />
+                                            <span style="color: #ca0000;">※黑貓冷凍運費説明：單筆購物滿<%=ship_condition %>元(含)以上免運。<br>
+                                                未滿<%=ship_condition %>元，本島150元，外島260元。</span><br />
                                              <label>
                                                 <input type="radio" name="paymode" value="1" id="card"   >信用卡</label><br />
                                             <label>

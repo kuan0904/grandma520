@@ -11,6 +11,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
     public string shipitem = "";
     protected void Page_Load(object sender, EventArgs e)
     {
+       
         if (Session["ShoppingList"] != null)
         {
 

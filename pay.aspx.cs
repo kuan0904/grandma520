@@ -20,6 +20,7 @@ public partial class pay : System.Web.UI.Page
     public string phone = "";
     public string mobile = "";
     public string memberid = "";
+    public string ship_condition = "5000";
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["ShoppingList"] == null)
@@ -27,6 +28,8 @@ public partial class pay : System.Web.UI.Page
             Response.Write("<script>alert('購物車無資料!');location.href='index';</script>");
             Response.End();
         }
+        DataTable dt = classlib.Get_promo("1");
+        ship_condition = dt.Rows[0]["ps_condition"].ToString();
         if (Session["memberid"] != null && Session["memberid"].ToString() != "")
         {
             MultiView1.ActiveViewIndex = 1;
