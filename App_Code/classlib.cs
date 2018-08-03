@@ -984,7 +984,7 @@ namespace unity {
             string noHTMLNormalised = Regex.Replace(noHTML, @"\s{2,}", " ");
             return noHTMLNormalised;
         }
-        public static string get_pd(string ord_id)
+        public static string get_pd(string ord_code)
         {
             string msg = "";
             using (OleDbConnection conn = new OleDbConnection(classlib.dbConnectionString))
@@ -993,10 +993,10 @@ namespace unity {
                 OleDbDataReader rs;
                 OleDbCommand cmd = new OleDbCommand();
                 string strsql = @"SELECT *    FROM productdata INNER JOIN orderdetail ON  productdata.p_id = orderdetail.p_id
-                WHERE orderdetail.ord_id = @ord_id ";
+                WHERE orderdetail.ord_code = @ord_id ";
 
                 cmd = new OleDbCommand(strsql, conn);
-                cmd.Parameters.Add("@ord_id", OleDbType.Numeric).Value = ord_id;
+                cmd.Parameters.Add("@ord_id", OleDbType.VarChar ).Value = ord_code;
                 rs = cmd.ExecuteReader();
                 while (rs.Read())
                 {

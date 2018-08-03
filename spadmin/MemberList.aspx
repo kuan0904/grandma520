@@ -211,7 +211,7 @@
 				</td>
                 </tr>
             	<tr><td>
-                        	訂購商品： <%#unity.classlib .get_pd  (Eval ("ord_id").ToString ()) %>
+                        	訂購商品： <%#unity.classlib .get_pd  (Eval ("ord_code").ToString ()) %>
             		付款方式：<%# unity.classlib .getPaymode (Eval("paymode").ToString ()) %><br>
             		取貨方式，宅配到府<br>
             		應付金額：<%#Eval("totalprice") %>元<br>

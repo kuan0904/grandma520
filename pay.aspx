@@ -1,7 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="pay.aspx.cs" Inherits="pay" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-
+    <style>
+       input[type=radio   ]{
+            width:20px;
+            height :20px;
+        }
+    </style>
 
     <script>
         var countyid = "<%=countyid %>";
@@ -43,7 +48,7 @@
             if (countyid > 22) shipprice = 260;                          
             if (amount >= ship_condition) shipprice = 0;     
 
-           // if (promo == "1") shipprice = 0;
+        
             if ($('input[name="paymode"]:checked').val() == '4') {
                 shipprice += 60;
             }
@@ -51,7 +56,7 @@
             if ($('#self').prop('checked')) {
                 shipprice = 0;
             }
-
+              if (promo == "1") shipprice = 0;
             if ($('input[name="paymode"]:checked').val() == '5') {
                 shipprice = 0;
                 $('#discount_no').attr('disabled', true);
@@ -96,6 +101,19 @@
             getCounty();
             getCity(countyid, '#cityid');
             $("input[name='paymode']").change(function () {
+                $('#address').prop('readonly', false);
+                $('#countyid').prop('disabled', false);
+                $('#cityid').prop('disabled', false);
+                 
+                if ($('input[name=paymode]:checked').val() == '5'  ||  $('#self').prop('checked')) {
+                    $("#self").trigger("click");                 
+                    $('#address').prop('readonly', true);
+                    $('#countyid').prop('disabled', true);
+                    $('#cityid').prop('disabled', true);
+                }
+
+
+              
                 recalculate();
             });
             $("#countyid").change(function () {
@@ -238,7 +256,9 @@
             var title = $("#title").val();
             var birthday = $("#birthday").val();
             var atmcode = $("#atmcode").val();
-         
+            $('#address').prop('readonly', false);
+            $('#countyid').prop('disabled', false);
+            $('#cityid').prop('disabled', false);
             if (cityid != "" && cityid != null) {
                 zip = cityid.split('-')[1];
                 cityid = cityid.split('-')[0];
@@ -552,13 +572,26 @@
                         <script>
                             $(function () {
                                
-                                $("#self").click(function () {                                    
-                                    countyid = 2;
-                                     zip = "241";
-                                    cityid = "43";     
-                                    getCity(countyid, '#cityid');
-                                    $("#countyid").val('2');
-                                    $("#address").val('新北市三重區名源街61巷5號合豐生機有限公司');
+                                $("#self").click(function () {   
+                                    $('#address').prop('readonly', false);
+                                    $('#countyid').prop('disabled', false);
+                                    $('#cityid').prop('disabled', false);
+                 
+                                    
+                                    if ($('#self').prop('checked')) {
+                                        $('#address').prop('readonly', true);
+                                        $('#countyid').prop('disabled', true);
+                                        $('#cityid').prop('disabled', true);
+                 
+                                        countyid = 2;
+                                        zip = "241";
+                                        cityid = "43";     
+                                        getCity(countyid, '#cityid');
+                                        $("#countyid").val('2');
+                                        $("#address").val('新北市三重區名源街61巷5號合豐生機有限公司');
+                                    }
+
+                                   
                                   
                                 
                                 })
@@ -569,7 +602,7 @@
                         <div class="form-group">
                             <label for="exampleInputPassword1">※收件地址</label>
                             <div>
-                                <input id="self" type="checkbox" />(三重自取)
+                                <input id="self" type="checkbox"  style ="width:20px; height :20px"/>(三重自取)
                                 <input name="zip" type="number" id="zip" placeholder="" class="input-postal"  value ="<%=zip%>" hidden="hidden" />
                                 <select class="select-city" name="countyid" id="countyid">
                                 </select>

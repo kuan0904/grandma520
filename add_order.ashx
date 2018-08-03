@@ -242,7 +242,7 @@ public class add_order : IHttpHandler,IRequiresSessionState  {
              
                 if (paymode == "5") DeliveryPrice = 0;
                 if (paymode == "4") DeliveryPrice += 60;
-                if (self != "") {
+                if (self != "" || promo =="1") {
                     DeliveryPrice = 0;
 
                 };

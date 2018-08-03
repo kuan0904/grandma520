@@ -143,7 +143,7 @@
                                    </tr> 
                                     <tr>
                                         <td>付款方式:<asp:DropDownList ID="paymode" runat="server" DataValueField="id" DataTextField ="name"></asp:DropDownList></td>
-                                        <td>取貨方式:宅配到府</td>
+                                        <td></td>
                                         <td>收件時間:<asp:DropDownList ID="receivetime" runat="server" DataValueField="id" DataTextField ="name"></asp:DropDownList></td>
                                         <td>發票資訊:<asp:DropDownList ID="invoice" runat="server"  DataValueField="id" DataTextField ="name"></asp:DropDownList></td>
                                         </tr>
