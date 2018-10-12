@@ -185,7 +185,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">行動電話</label>                               
-                                        <input name="mobile type="text" id="mobile" placeholder="輸入行動電話"  value ="<%=mobile %>"  class="form-control" />
+                                        <input name="mobile" type="text" id="mobile" placeholder="輸入行動電話"  value ="<%=mobile %>"  class="form-control" />
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">連絡電話</label>
@@ -210,7 +210,7 @@
 
                                         
                                     </div>
-                                    <input type="" class="form-control" id="address" placeholder="地址" value ="<%=address %>" />
+                                    <input type="text" class="form-control" id="address" placeholder="地址" value ="<%=address %>" />
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">修改密碼</label>

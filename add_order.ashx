@@ -235,17 +235,17 @@ public class add_order : IHttpHandler,IRequiresSessionState  {
                 }
 
                 DeliveryPrice = 150;
-               
+
 
                 if (int.Parse(countyid) > 22)  DeliveryPrice = 260;
                 if ( SubPrice >=ship_condition) DeliveryPrice = 0;
-             
+
                 if (paymode == "5") DeliveryPrice = 0;
-                if (paymode == "4") DeliveryPrice += 60;
                 if (self != "" || promo =="1") {
                     DeliveryPrice = 0;
 
                 };
+                if (paymode == "4") DeliveryPrice += 60;
                 TotalPrice = SubPrice + DeliveryPrice ;
                 DiscountPrice = int.Parse ( classlib. Get_coupon_no ( context.Session ["memberid"].ToString (),discount_no,SubPrice.ToString ()));
                 TotalPrice = TotalPrice - DiscountPrice;

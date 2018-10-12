@@ -48,7 +48,7 @@
             if (countyid > 22) shipprice = 260;                          
             if (amount >= ship_condition) shipprice = 0;     
 
-        
+            if (promo == "1") shipprice = 0;
             if ($('input[name="paymode"]:checked').val() == '4') {
                 shipprice += 60;
             }
@@ -56,7 +56,7 @@
             if ($('#self').prop('checked')) {
                 shipprice = 0;
             }
-              if (promo == "1") shipprice = 0;
+          
             if ($('input[name="paymode"]:checked').val() == '5') {
                 shipprice = 0;
                 $('#discount_no').attr('disabled', true);
@@ -78,12 +78,13 @@
             $('#totalprice').html(amount + shipprice);
         }
 
-        $(document).ready(function () {
-               $("#email").blur(function () {
-          
+        $(document).ready(function () {            
+                $("#self").click(function () {   
+                    selfclick();
+                })
+               $("#email").blur(function () {          
                    $.post('Handler.ashx', { "email": $("#email").val(), "_": new Date().getTime() }, function (data) {
                        if (data == "Y") {
-
                            alert('此Email已是會員,請登入後再結帳!');
                            $("#email").val('');
                        }
@@ -104,20 +105,14 @@
                 $('#address').prop('readonly', false);
                 $('#countyid').prop('disabled', false);
                 $('#cityid').prop('disabled', false);
-                 
-                if ($('input[name=paymode]:checked').val() == '5'  ||  $('#self').prop('checked')) {
-                    $("#self").trigger("click");                 
-                    $('#address').prop('readonly', true);
-                    $('#countyid').prop('disabled', true);
-                    $('#cityid').prop('disabled', true);
-                }
-
-
+                selfclick();
+                //if ($('input[name=paymode]:checked').val() == '5' || $('#self').prop('checked')) {
+                //    selfclick();
+                    
+                //}              
               
-                recalculate();
             });
-            $("#countyid").change(function () {
-          
+            $("#countyid").change(function () {          
                 if ($(this).val() != "") {                  
                     getCity($(this).val(), '#cityid');
                     if (cityid != "") {
@@ -203,7 +198,24 @@
                 $("#address").val("");
             }
         }
-
+        function selfclick() {
+            $('#address').prop('readonly', false);
+            $('#countyid').prop('disabled', false);
+            $('#cityid').prop('disabled', false);      
+            if ($('#self').prop('checked')) {
+                $('#address').prop('readonly', true);
+                $('#countyid').prop('disabled', true);
+                $('#cityid').prop('disabled', true);
+                 
+                countyid = 2;
+                zip = "241";
+                cityid = "43";     
+                getCity(countyid, '#cityid');
+                $("#countyid").val('2');
+                $("#address").val('新北市三重區名源街61巷5號合豐生機有限公司');
+            }
+            recalculate();
+        }
 
         function getCity(p_COUNTYID, obj) {
             if (p_COUNTYID != null) {
@@ -569,36 +581,7 @@
                             <p>訂單明細收件信箱</p>
                             <input type="text" name="Remail" id="Remail" class="form-control"  placeholder="輸入電子信箱 " value="<%=email %>" />
                         </div>
-                        <script>
-                            $(function () {
-                               
-                                $("#self").click(function () {   
-                                    $('#address').prop('readonly', false);
-                                    $('#countyid').prop('disabled', false);
-                                    $('#cityid').prop('disabled', false);
-                 
-                                    
-                                    if ($('#self').prop('checked')) {
-                                        $('#address').prop('readonly', true);
-                                        $('#countyid').prop('disabled', true);
-                                        $('#cityid').prop('disabled', true);
-                 
-                                        countyid = 2;
-                                        zip = "241";
-                                        cityid = "43";     
-                                        getCity(countyid, '#cityid');
-                                        $("#countyid").val('2');
-                                        $("#address").val('新北市三重區名源街61巷5號合豐生機有限公司');
-                                    }
-
-                                   
-                                  
-                                
-                                })
-                            })
-
-
-                        </script>
+       
                         <div class="form-group">
                             <label for="exampleInputPassword1">※收件地址</label>
                             <div>
